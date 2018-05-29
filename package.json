@@ -1,0 +1,24 @@
+{
+  "name": "solidity-t",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node scripts/compile.js",
+    "pretest": "npm run compile",
+    "test": "mocha tests",
+    "predeploy": "npm run compile",
+    "deploy": "node scripts/deploy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^6.0.1",
+    "solc": "^0.4.24",
+    "truffle-hdwallet-provider": "0.0.3"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.1.0",
+    "mocha": "^5.2.0"
+  }
+}
