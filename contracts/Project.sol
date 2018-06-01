@@ -19,6 +19,25 @@ pragma solidity ^0.4.17;
 // mappings 里面并没有存储所有的 key，因此无法获取所有的 key 列表
 // mappings 里面的值无法被遍历，只能通过 key 逐个去取
 
+// 智能合约中的函数要么是 transaction 类型，要么是 call 类型
+// transaction: 可以修改合约数据; 返回交易地址TxHash; 耗时约15s; 消耗Gas
+// call: 不能修改合约数据; 能返回数据; 耗时比较短; 免费调用
+
+// Truffle
+// Truffle是以太坊最受欢迎的开发框架, 类似于vue-cli, 用于组装好模块, 之后只需要在上面开发应用逻辑即可
+
+/**
+ 编译部署测试智能合约
+ 1. 使用JS模块 solc 将 Solidity 源代码编译成 Bytecode 和 ABI(接口声明)
+ 2. 使用 web3.js 将编译后的 Bytecode 部署到本地测试网络(ganache-cli) 和公共测试网络
+ 3. 使用 web3.js 和 mochajs 测试部署完的智能合约
+
+ 注: 
+ solc: 编译 Solidity 源代码 - solc.compile(contract source)
+ ganache-cli: Truffle 框架的一部分，能够让开发者快速启动本地测试网络
+ mochajs: JS测试框架
+ */
+ 
 
 /**
  * @title SafeMath
